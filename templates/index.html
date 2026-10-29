@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detector</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title">Emotion Detector</h2>
+                <p class="text-muted">Enter a statement and the system will analyze its emotions.</p>
+                <textarea id="textToAnalyze" class="form-control" rows="4"
+                          placeholder="Type your statement here..."></textarea>
+                <button type="button" class="btn btn-primary mt-3" onclick="RunSentimentAnalysis()">
+                    Run Emotion Detection
+                </button>
+                <div id="system_response" class="mt-4"></div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='mywebscript.js') }}"></script>
+</body>
+</html>
